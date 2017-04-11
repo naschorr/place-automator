@@ -194,7 +194,8 @@ class AutoPlacer {
 		if(this.isReddit){
 			this.place.setColor(colorIndex);
 		}else if(this.isPxls){
-			this.place.switchColor(colorIndex);
+			setTimeout(function() { this.place.switchColor(colorIndex); }, 10000); 
+			
 		}else{
 			console.error("Unspecified system in chooseColor()");
 		}
